@@ -14,7 +14,7 @@ def csv_to_json(csv_file, json_file):
     with open(json_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4)
 
-    print(f"✅ JSON file created: {json_file}")
+    print(f" JSON file created: {json_file}")
 
 def main():
     parser = argparse.ArgumentParser(description="CSV to JSON Converter Utility")
@@ -24,7 +24,7 @@ def main():
     args = parser.parse_args()
 
     if not os.path.exists(args.csv_file):
-        print("❌ CSV file not found")
+        print(" CSV file not found")
         return
 
     csv_to_json(args.csv_file, args.json_file)
